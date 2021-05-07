@@ -27,6 +27,24 @@ document.querySelector('.next').addEventListener('click', function () {
 	slider.goTo('next');
 });
 
+const nextSlider = tns({
+	container: '.feedback__slider',
+	items: 1,
+	slideBy: 'page',
+	controls: false,
+	navPosition: "bottom",
+	speed: 1500,
+	nav: false
+});
+
+document.querySelector('.left').addEventListener('click', function () {
+	nextSlider.goTo('prev');
+});
+document.querySelector('.right').addEventListener('click', function () {
+	nextSlider.goTo('next');
+});
+
+
 window.addEventListener('DOMContentLoaded', () => {
 	const menu = document.querySelector('.nav__list'),
 		menuItem = document.querySelectorAll('.menu_item'),
