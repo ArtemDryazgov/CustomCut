@@ -7,7 +7,7 @@ const slider = tns({
 	navPosition: "bottom",
 	speed: 1500,
 	responsive: {
-		340: {
+		320: {
 			items: 1,
 			speed: 300,
 		},
