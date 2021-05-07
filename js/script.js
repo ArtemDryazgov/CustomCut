@@ -9,6 +9,7 @@ const slider = tns({
 	responsive: {
 		340: {
 			items: 1,
+			speed: 300,
 		},
 		470: {
 			nav: true,
@@ -16,6 +17,7 @@ const slider = tns({
 		767: {
 			items: 2,
 			nav: true,
+			speed: 1500
 		}
 	}
 });
@@ -34,7 +36,16 @@ const nextSlider = tns({
 	controls: false,
 	navPosition: "bottom",
 	speed: 1500,
-	nav: false
+	responsive: {
+		340: {
+			nav: true,
+			speed: 300,
+		},
+		767: {
+			nav: false,
+			speed: 1500,
+		}
+	}
 });
 
 document.querySelector('.left').addEventListener('click', function () {
